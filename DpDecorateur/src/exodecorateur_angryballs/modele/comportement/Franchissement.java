@@ -1,24 +1,15 @@
-package exodecorateur_angryballs.modele;
+package exodecorateur_angryballs.modele.comportement;
 
+import exodecorateur_angryballs.modele.Bille;
+import exodecorateur_angryballs.modele.DecorateurBille;
 import mesmaths.cinematique.Collisions;
 
-/**
- * 
- * Bille traversant les murs et subissant un mouvement rectiligne uniforme (mouvment en ligne droite à vitesse constante)
- * 
- * 
- *  A MODIFIER
- *  
- *  */
+public class Franchissement extends DecorateurBille{
 
-public class BilleMvtRUPasseMurailles extends DecorateurBille
-{
-
-	public BilleMvtRUPasseMurailles(Bille billeDecoree) 
-	{
+	public Franchissement(Bille billeDecoree) {
 		super(billeDecoree);
 	}
-
+	
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur)
 	{
@@ -26,6 +17,3 @@ public class BilleMvtRUPasseMurailles extends DecorateurBille
 	}
 
 }
-
-
-
