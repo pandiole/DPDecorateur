@@ -7,7 +7,7 @@ import java.util.Vector;
 import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
 
-
+//TEST BILLE
 /**
  * Cas général d'une bille de billard
  * 
