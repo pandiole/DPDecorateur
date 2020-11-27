@@ -99,6 +99,5 @@ public interface Bille
 	
 	abstract void setState(StateBille bille);
 	
-	abstract void action();
 }
 

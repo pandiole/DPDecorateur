@@ -109,8 +109,5 @@ public abstract class DecorateurBille implements Bille {
 		this.etatBille = newEtat;
 	}
 
-	public void action() {
-		etatBille.action(this);
-	}
 
 }

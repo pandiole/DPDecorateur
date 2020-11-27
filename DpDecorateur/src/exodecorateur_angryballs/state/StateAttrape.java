@@ -1,38 +1,29 @@
 package exodecorateur_angryballs.state;
 
-import exodecorateur_angryballs.modele.Bille;
+import java.awt.event.MouseEvent;
 
-public class StateAttrape implements StateBille{
+public class StateAttrape extends StateBille{
 
-	public StateAttrape(Bille bille) {
-		// TODO Auto-generated constructor stub
+	public StateAttrape(StateBille next, State s) {
+		super(next, s);
+
 	}
-
+	
 	@Override
-	public void action(Bille context) {
-		System.out.println("bille attrapée");
-		context.setState(this);
-		//SI CLIC DE LA SOURIS ALORS BILLE ARRETE DE BOUGER
-		//ELLE VA BOUGER AVEC LA SOURIS
-		
+	void pressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
 	}
 	
+	//LORSQU'ON TIRE LA BILLE
+	public void dragged(MouseEvent arg0) {
+		System.out.println("Bille tiree");
+		this.next.billePilotee.setForceLancer();
 
+	}
 	
-	
-	//GERER LE MOUVEMENT DE LA SOURIS
-//	private Long temps;	
-//    @Override
-//    public void onMove(Vecteur offset) {
-//        if(temps != null) {
-//            double diff = System.currentTimeMillis() - temps;
-//            if(diff <= 0) {
-//                return;
-//            }
-//            Vecteur vitesse = parent.getVitesse().somme(offset.produit(10000.0/(diff*parent.masse())));
-//            parent.setVitesse(vitesse);
-//        }
-//
-//        temps = System.currentTimeMillis();
-//    }
+	//LORSQU'ON LACHE LA BILLE
+	public void released() {
+	}
+
 }

@@ -1,17 +1,38 @@
 package exodecorateur_angryballs.state;
 
+import java.awt.event.MouseEvent;
+import java.util.Vector;
+
 import exodecorateur_angryballs.modele.Bille;
+import exodecorateur_angryballs.vues.Billard;
 
-public class StateLache implements StateBille{
-
-	public StateLache(Bille bille) {
+public class StateLache extends StateBille{
+	
+	public StateLache(StateBille next, State s) {
+		super(next, s);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public void action(Bille context) {
-		System.out.println("bille lachée");
-		context.setState(null);
-		//SI LACHE LA SOURIS ALORS BILLE REBOUGE NORMALEMENT
+	void pressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	@Override
+	void dragged(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void released() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+
 
 }
