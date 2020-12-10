@@ -95,9 +95,7 @@ public interface Bille
 	
 	abstract String toString();
 	
-	abstract void dessine(Graphics graphics);
-	
-	abstract void setState(StateBille bille);
+	abstract void dessine(Graphics graphics);//PEUT MIEUX FAIRE
 	
 }
 

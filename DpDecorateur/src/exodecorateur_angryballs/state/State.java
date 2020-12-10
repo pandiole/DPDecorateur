@@ -14,16 +14,15 @@ public class State implements MouseMotionListener, MouseListener{
 	StateAttrape sAttrape;
 	StateLache sLache;
 	
+	Vector<Bille> billes;
 	Billard billard;
 	
 	public State(Vector<Bille> billes, Billard billard) {
-		
+		this.billes = billes;
 		this.billard = billard;
 		
 		this.billard.addMouseListener(this);
 		this.billard.addMouseMotionListener(this);
-		
-		this.sBille = this.sLache;
 		
 		this.initState();
 	}
@@ -35,29 +34,37 @@ public class State implements MouseMotionListener, MouseListener{
 		this.sLache.next = this.sAttrape;
 		
 		this.sBille = this.sLache;
-	}
+	}	
 	
+	public StateBille getsBille() {
+		return sBille;
+	}
+
+	public void setsBille(StateBille sBille) {
+		this.sBille = sBille;
+	}
+
 	@Override
 	public void mouseDragged(MouseEvent mEvent) {		
-		//this.attrape.prendre(arg0);
+		System.err.println("Bille tirée");
 		this.sBille.dragged(mEvent);
 	}
 	
 	@Override
 	public void mousePressed(MouseEvent mEvent) {
-		System.out.println("Bille attrapée");
-		
+		System.err.println("Bille attrapée");
+		this.sBille.pressed(mEvent);
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent mEvent) {
-		System.out.println("Bille lachee");
-		
+		System.err.println("Bille lachee");
+		this.sBille.released();
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent mEvent) {
-		System.out.println("Bille bouge");
+		System.err.println("Bille bouge");
 		
 	}
 

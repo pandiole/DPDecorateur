@@ -4,10 +4,8 @@ import java.util.Vector;
 
 import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
-import exodecorateur_angryballs.state.StateAttrape;
-import exodecorateur_angryballs.state.StateLache;
+import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
-import mesmaths.mecanique.MecaniquePoint;
 
 public class Pilotee extends DecorateurBille{
 
@@ -15,10 +13,12 @@ public class Pilotee extends DecorateurBille{
 
 	public Pilotee(Bille bille) {
 		super(bille);
+		this.forceLancer = Vecteur.VECTEURNUL;
 	}
 
 	public void gestionAccélération(Vector<Bille> billes)
 	{
+		super.gestionAccélération(billes); 
 		this.getAcceleration().ajoute(this.forceLancer);
 	}
 
@@ -29,6 +29,7 @@ public class Pilotee extends DecorateurBille{
 	public void setForceLancer(Vecteur forceLancer) {
 		this.forceLancer = forceLancer;
 	}
+
 
 	
 }

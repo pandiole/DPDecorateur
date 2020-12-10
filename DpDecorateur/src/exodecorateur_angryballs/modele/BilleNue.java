@@ -128,7 +128,7 @@ public class BilleNue implements Bille {
 	}
 
 	@Override
-	public void dessine(Graphics g) {
+	public void dessine(Graphics g) {//PEUT MIEUX FAIRE    EST CE ENCORE VALIDE SUR ANDROID ? NON PARCE QUE.
 		 int width, height;
 		  int xMin, yMin;
 		  
@@ -141,12 +141,6 @@ public class BilleNue implements Bille {
 		  g.fillOval( xMin, yMin, width, height);
 		  g.setColor(Color.CYAN);
 		  g.drawOval(xMin, yMin, width, height);
-		
-	}
-
-	@Override
-	public void setState(StateBille bille) {
-		// TODO Auto-generated method stub
 		
 	}
 }

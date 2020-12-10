@@ -19,7 +19,7 @@ import outilsvues.Outils;
 public class CadreAngryBalls extends Frame implements VueBillard
 {
 TextField présentation;
-Billard billard;
+public Billard billard;
 public Button lancerBilles, arrêterBilles;
 Panel haut, centre, bas;
 

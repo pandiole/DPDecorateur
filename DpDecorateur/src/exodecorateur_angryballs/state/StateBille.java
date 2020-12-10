@@ -7,20 +7,20 @@ import exodecorateur_angryballs.modele.comportement.Pilotee;
 
 public abstract class StateBille{
 	
-	StateBille next;
-	Pilotee billePilotee;
+	protected StateBille next;
+	protected Pilotee billePilotee;
 	
-	State s;
+	protected State state;
 	
 	public StateBille(StateBille next, State s) {
 		this.next = next;
-		this.s = s;
+		this.state = s;
 	}
 
-	abstract void pressed(MouseEvent arg0);
-	abstract void dragged(MouseEvent arg0);
+	public void pressed(MouseEvent arg0) {}
+	public void dragged(MouseEvent arg0) {}
 	
-	abstract void released();
+	public void released() {}
 	
 	  
 }

@@ -4,18 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
-import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
 
 public abstract class DecorateurBille implements Bille {
 
-	protected Bille billeDecoree;
-	protected StateBille etatBille;
+	public Bille billeDecoree;
 
 	public DecorateurBille(Bille billeDecoree) 
 	{
 		this.billeDecoree = billeDecoree;
-		this.etatBille = null;
 	}
 
 	@Override
@@ -89,7 +86,7 @@ public abstract class DecorateurBille implements Bille {
 		return this.billeDecoree.toString();
 	}
 
-	public void dessine (Graphics g)
+	public void dessine (Graphics g)//PEUT MIEUX FAIRE
 	{
 		int width, height;
 		int xMin, yMin;
@@ -104,10 +101,4 @@ public abstract class DecorateurBille implements Bille {
 		g.setColor(Color.CYAN);
 		g.drawOval(xMin, yMin, width, height);
 	}
-
-	public void setState(StateBille newEtat) {
-		this.etatBille = newEtat;
-	}
-
-
 }
