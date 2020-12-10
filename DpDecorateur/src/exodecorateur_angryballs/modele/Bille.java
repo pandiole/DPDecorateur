@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
+import exo_decorateur_angryballs.modele.dessin.Dessin;
 import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
 
@@ -78,7 +79,8 @@ public interface Bille
 	 * 
 	 * Le comportement par défaut est le choc parfaitement élastique (c-à-d rebond sans amortissement)
 	 * 
-	 * @return true si il y a collision et dans ce cas les positions et vecteurs vitesses des 2 billes impliquées dans le choc sont modifiées
+	 * @return true si il y a collision et dans ce cas les positions et vecteurs vites@Override
+	ses des 2 billes impliquées dans le choc sont modifiées
 	 * si renvoie false, il n'y a pas de collision et les billes sont laissées intactes 
 	 * */
 	abstract boolean gestionCollisionBilleBille(Vector<Bille> billes);
@@ -94,8 +96,8 @@ public interface Bille
 	abstract void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur);
 	
 	abstract String toString();
-	
-	abstract void dessine(Graphics graphics);//PEUT MIEUX FAIRE
+
+	abstract void dessine(Dessin dessin); 
 	
 }
 

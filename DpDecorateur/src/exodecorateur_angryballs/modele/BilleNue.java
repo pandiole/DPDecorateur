@@ -1,10 +1,9 @@
 package exodecorateur_angryballs.modele;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.util.Vector;
 
-import exodecorateur_angryballs.state.StateBille;
+import exo_decorateur_angryballs.modele.dessin.Dessin;
 import mesmaths.cinematique.Cinematique;
 import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
@@ -94,6 +93,11 @@ public class BilleNue implements Bille {
 	}
 	
 	@Override
+	public void dessine(Dessin dessin) {
+		dessin.dessine(this);		
+	}
+	
+	@Override
 	public void deplacer(double deltaT)
 	{
 		Cinematique.mouvementUniformémentAccéléré( this.getPosition(), this.getVitesse(), this.getAcceleration(), deltaT);
@@ -122,25 +126,7 @@ public class BilleNue implements Bille {
 	
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur,
-			double hauteur) {
-		// TODO Auto-generated method stub
-		
-	}
+			double hauteur) {}
 
-	@Override
-	public void dessine(Graphics g) {//PEUT MIEUX FAIRE    EST CE ENCORE VALIDE SUR ANDROID ? NON PARCE QUE.
-		 int width, height;
-		  int xMin, yMin;
-		  
-		  xMin = (int)Math.round(this.getPosition().x-this.getRayon());
-		  yMin = (int)Math.round(this.getPosition().y-this.getRayon());
-		
-		  width = height = 2*(int)Math.round(this.getRayon()); 
-		
-		  g.setColor(this.getCouleur());
-		  g.fillOval( xMin, yMin, width, height);
-		  g.setColor(Color.CYAN);
-		  g.drawOval(xMin, yMin, width, height);
-		
-	}
+	
 }

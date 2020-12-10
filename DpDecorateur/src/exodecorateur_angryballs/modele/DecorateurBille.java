@@ -1,9 +1,9 @@
 package exodecorateur_angryballs.modele;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.util.Vector;
 
+import exo_decorateur_angryballs.modele.dessin.Dessin;
 import mesmaths.geometrie.base.Vecteur;
 
 public abstract class DecorateurBille implements Bille {
@@ -86,19 +86,8 @@ public abstract class DecorateurBille implements Bille {
 		return this.billeDecoree.toString();
 	}
 
-	public void dessine (Graphics g)//PEUT MIEUX FAIRE
+	public void dessine (Dessin dessin)
 	{
-		int width, height;
-		int xMin, yMin;
-
-		xMin = (int)Math.round(this.getPosition().x-this.getRayon());
-		yMin = (int)Math.round(this.getPosition().y-this.getRayon());
-
-		width = height = 2*(int)Math.round(this.getRayon()); 
-
-		g.setColor(this.getCouleur());
-		g.fillOval( xMin, yMin, width, height);
-		g.setColor(Color.CYAN);
-		g.drawOval(xMin, yMin, width, height);
+		this.billeDecoree.dessine(dessin);
 	}
 }
