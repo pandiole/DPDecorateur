@@ -2,7 +2,6 @@ package exodecorateur_angryballs.modele;
 
 import java.awt.Color;
 import java.util.Vector;
-
 import exodecorateur_angryballs.modele.dessin.Dessin;
 import mesmaths.cinematique.Cinematique;
 import mesmaths.geometrie.base.Geop;
@@ -109,7 +108,6 @@ public class BilleNue implements Bille {
 		this.getAcceleration().set(Vecteur.VECTEURNUL);
 	}
 	
-	//PEUT ETRE TRUC A RAJOUTER
 	@Override
 	public boolean gestionCollisionBilleBille(Vector<Bille> billes)
 	{
@@ -123,10 +121,8 @@ public class BilleNue implements Bille {
                 + this.getClef();
     }
 
-	
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur,
 			double hauteur) {}
 
-	
 }

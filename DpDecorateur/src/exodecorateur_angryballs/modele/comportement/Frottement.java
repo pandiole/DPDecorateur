@@ -6,6 +6,10 @@ import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
 import mesmaths.mecanique.MecaniquePoint;
 
+/**
+ * represente le comportement de la bille quand celle-ci subit un freinage
+ * dû aux frottements dans l'air
+ */
 public class Frottement extends DecorateurBille {
 
 	public Frottement(Bille billeDecoree) {

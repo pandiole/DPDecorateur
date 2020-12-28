@@ -2,7 +2,6 @@ package exodecorateur_angryballs.modele;
 
 import java.awt.Color;
 import java.util.Vector;
-
 import exodecorateur_angryballs.modele.dessin.Dessin;
 import mesmaths.geometrie.base.Vecteur;
 

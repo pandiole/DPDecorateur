@@ -5,6 +5,9 @@ import java.awt.Graphics;
 
 import exodecorateur_angryballs.modele.Bille;
 
+/**
+ * CLASS POUR AFFICHAGE SUR ECRAN D'ORDI
+ * */
 public class DessinOrdi implements Dessin{
 	Graphics g;
 	

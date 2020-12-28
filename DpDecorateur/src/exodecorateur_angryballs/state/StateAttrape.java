@@ -11,8 +11,9 @@ public class StateAttrape extends StateBille{
 		super(next, s);
 
 	}
-	
-	//LORSQU'ON TIRE LA BILLE
+	/**
+	 * LORSQU'ON TIRE LA BILLE
+	 * */
 	public void dragged(MouseEvent me) {
 		System.err.println("Bille tiree");
 		//CALCULE LA DIFFERENCE ENTRE LA POSITION DU POINTEUR DE LA SOURIS ET LA POSITION DE LA BILLE
@@ -22,6 +23,9 @@ public class StateAttrape extends StateBille{
 		this.next.billePilotee.setForceLancer(force);
 	}
 
+	/**
+	 * LORSQU'ON LACHE LA BILLE
+	 * */
 	public void released() {
 		Bille billeSuivant = this.next.billePilotee.billeDecoree;
 		this.state.billes.remove(this.next.billePilotee);

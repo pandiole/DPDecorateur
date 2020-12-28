@@ -13,6 +13,9 @@ public class StateLache extends StateBille{
 		super(next, s);
 	}
 
+	/**
+	 * LORSQU'ON LACHE LA BILLE
+	 * */
 	@Override
 	public void pressed(MouseEvent me) {
 		for(Bille b : this.state.billes) {

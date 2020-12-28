@@ -4,6 +4,10 @@ import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
 import mesmaths.cinematique.Collisions;
 
+/**
+ * represente le comportement de la bille quand celle-ci franchis les parois
+ * et réapparait sur le coté opposé
+ */
 public class Franchissement extends DecorateurBille{
 
 	public Franchissement(Bille billeDecoree) {

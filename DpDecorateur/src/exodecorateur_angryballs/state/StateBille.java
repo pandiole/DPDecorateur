@@ -4,7 +4,9 @@ import java.awt.event.MouseEvent;
 
 import exodecorateur_angryballs.modele.comportement.Pilotee;
 
-
+/**
+ * DEFINITION DES FONCTIONS APPLIQUEE AUX ACTIONS SUR LA SOURIS
+ * */
 public abstract class StateBille{
 	
 	protected StateBille next;

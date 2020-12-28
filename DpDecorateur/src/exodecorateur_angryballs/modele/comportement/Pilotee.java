@@ -6,7 +6,9 @@ import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
 import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
-
+/**
+ * CLASS PILOTEE : LORSQUE L'UTILISATEUR BOUGE LA BILLE AVEC LA SOURIS
+ * */
 public class Pilotee extends DecorateurBille{
 
 	Vecteur forceLancer;
@@ -16,6 +18,9 @@ public class Pilotee extends DecorateurBille{
 		this.forceLancer = Vecteur.VECTEURNUL;
 	}
 
+	/**
+	 * GERE L'ACCELERATION EN FONCTION DE LA FORCE DU LANCER ET DU POIDS DE LA BILLE
+	 * */
 	public void gestionAccélération(Vector<Bille> billes)
 	{
 		super.gestionAccélération(billes); 

@@ -4,6 +4,9 @@ import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
 import mesmaths.cinematique.Collisions;
 
+/**
+ * represente le comportement de la bille quand celle-ci est bloquee par un bord
+ */
 public class Bloquee extends DecorateurBille {
 
 	public Bloquee(Bille billeDecoree) {

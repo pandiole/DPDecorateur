@@ -77,12 +77,12 @@ public class TestAngryBalls
 		
 		State state = new State(billes, cadre.billard);
 		
-		billes.add(new Pilotee(new RectiligneUniforme(new Rebond(new BilleNue(p0, rayon*3, v0, Color.red)))));
-//		billes.add(new Pesanteur(new Frottement(new Rebond(new BilleNue(p1, rayon, v1, Color.yellow))), new Vecteur(0,0.001)));
-//		billes.add(new Newton(new Frottement(new Rebond(new BilleNue(p2, rayon, v2, Color.green)))));
-//		billes.add(new RectiligneUniforme(new Franchissement(new BilleNue(p3, rayon, v3, Color.cyan))));
-//		billes.add(new Newton(new Bloquee(new BilleNue(p4, rayon, v4, Color.black))));
-		billes.add(new Newton(new Bloquee(new BilleNue(p5, rayon*2, v5, Color.orange))));
+		billes.add(new RectiligneUniforme(new Rebond(new BilleNue(p0, rayon, v0, Color.red))));
+		billes.add(new Pesanteur(new Frottement(new Rebond(new BilleNue(p1, rayon, v1, Color.yellow))), new Vecteur(0,0.001)));
+		billes.add(new Newton(new Frottement(new Rebond(new BilleNue(p2, rayon, v2, Color.green)))));
+		billes.add(new RectiligneUniforme(new Franchissement(new BilleNue(p3, rayon, v3, Color.cyan))));
+		billes.add(new Newton(new Bloquee(new BilleNue(p4, rayon, v4, Color.black))));
+		billes.add(new Pilotee(new Newton(new Bloquee(new BilleNue(p5, rayon, v5, Color.orange)))));
 
 		//---------------------- ici finit la partie à changer -------------------------------------------------------------
 

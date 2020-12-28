@@ -1,14 +1,10 @@
 package exodecorateur_angryballs.modele;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.util.Vector;
-
 import exodecorateur_angryballs.modele.dessin.Dessin;
-import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
 
-//TEST BILLE
 /**
  * Cas général d'une bille de billard
  * 
@@ -38,7 +34,9 @@ public interface Bille
 	 */
 	abstract Vecteur getAcceleration();
 
-	// A QUOI CA SERT ?
+	/**
+	 * @return la couleur
+	 */
 	abstract Color getCouleur();	
 	
 	/**
@@ -95,9 +93,14 @@ public interface Bille
 	 * */
 	abstract void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur);
 	
+	/**
+	 * @return string
+	 */
 	abstract String toString();
 
+	/**
+	 * dessine la bille
+	 */
 	abstract void dessine(Dessin dessin); 
 	
 }
-

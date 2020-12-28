@@ -6,6 +6,10 @@ import exodecorateur_angryballs.modele.Bille;
 import exodecorateur_angryballs.modele.DecorateurBille;
 import exodecorateur_angryballs.modele.OutilsBille;
 
+/**
+ * represente le comportement de la bille quand celle-ci est attirée par les autres billes
+ * ceci est dû à la force de Newton
+ */
 public class Newton extends DecorateurBille {
 
 	public Newton(Bille billeDecoree) 
