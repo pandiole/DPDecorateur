@@ -1,4 +1,4 @@
-package exo_decorateur_angryballs.modele.dessin;
+package exodecorateur_angryballs.modele.dessin;
 
 import exodecorateur_angryballs.modele.Bille;
 

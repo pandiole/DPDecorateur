@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Vector;
 
-import exo_decorateur_angryballs.modele.dessin.Dessin;
+import exodecorateur_angryballs.modele.dessin.Dessin;
 import exodecorateur_angryballs.state.StateBille;
 import mesmaths.geometrie.base.Vecteur;
 

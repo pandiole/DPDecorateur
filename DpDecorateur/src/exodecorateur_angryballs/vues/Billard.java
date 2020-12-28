@@ -4,9 +4,9 @@ import java.awt.Canvas;
 import java.awt.Graphics;
 import java.util.Vector;
 
-import exo_decorateur_angryballs.modele.dessin.Dessin;
-import exo_decorateur_angryballs.modele.dessin.DessinOrdi;
 import exodecorateur_angryballs.modele.Bille;
+import exodecorateur_angryballs.modele.dessin.Dessin;
+import exodecorateur_angryballs.modele.dessin.DessinOrdi;
 
 
 /**

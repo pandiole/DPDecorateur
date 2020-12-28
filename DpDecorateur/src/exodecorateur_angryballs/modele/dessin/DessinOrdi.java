@@ -1,4 +1,4 @@
-package exo_decorateur_angryballs.modele.dessin;
+package exodecorateur_angryballs.modele.dessin;
 
 import java.awt.Color;
 import java.awt.Graphics;

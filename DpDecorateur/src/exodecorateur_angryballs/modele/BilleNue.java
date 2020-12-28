@@ -3,7 +3,7 @@ package exodecorateur_angryballs.modele;
 import java.awt.Color;
 import java.util.Vector;
 
-import exo_decorateur_angryballs.modele.dessin.Dessin;
+import exodecorateur_angryballs.modele.dessin.Dessin;
 import mesmaths.cinematique.Cinematique;
 import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
